@@ -158,9 +158,7 @@ class CSVToDB:
             self.conn.commit()
 
     def insert_user(self, transaction):
-        # self.cursor.execute("""
-        #                     select * from "user";
-        #                     """)
+    
         self.cursor.execute("""
             INSERT INTO "user" ("phoneNumber", "createdAt", "updatedAt", "nTransactions")
             VALUES (%s, %s, %s, %s)
